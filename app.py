@@ -187,7 +187,7 @@ if __name__ == '__main__':
         
         <div style="margin: 40px 0;">
             <a href="/download" class="btn">📥 下載完整套件 (ZIP)</a>
-            <a href="https://github.com/yourusername/student-writing-app" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Joshua19683721/writing01" target="_blank" class="btn github-btn">
                 🌟 查看GitHub原始碼
             </a>
         </div>
