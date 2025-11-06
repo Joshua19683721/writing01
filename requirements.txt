@@ -1,0 +1,6 @@
+pyqt6
+jieba
+gTTS
+speechrecognition
+pyaudio
+playsound==1.2.2flask
