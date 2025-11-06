@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, send_from_directory
 import os
 import zipfile
 
@@ -14,7 +14,7 @@ def create_zip():
                 'main.py',
                 'writing_advisor.py', 
                 'db_init.py',
-                'requirements.txt',
+                'requirements_desktop.txt',
                 'README.md',
                 '.gitignore'
             ]
@@ -41,21 +41,6 @@ def download():
 @app.route('/files/<path:path>')
 def send_file(path):
     return send_from_directory('.', path)
-
-@app.route('/api/info')
-def app_info():
-    return {
-        'name': '國小生作文練習APP',
-        'version': '1.0.0',
-        'description': '基於Python開發的作文練習工具，支援作文/造句/講話轉寫三大模式',
-        'features': [
-            '📚 作文模式：逐句引導，即時優化建議',
-            '✏️ 造句模式：關鍵詞+句式練習', 
-            '🎤 講話轉寫：語音轉文字，口語轉書面語',
-            '🔊 語音朗讀：建議句語音播放',
-            '💾 資料庫儲存：練習記錄自動保存'
-        ]
-    }
 
 if __name__ == '__main__':
     # 创建templates目录（如果不存在）
@@ -157,13 +142,6 @@ if __name__ == '__main__':
         .github-btn {
             background: linear-gradient(135deg, #333 0%, #666 100%);
         }
-        .screenshot {
-            margin: 30px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            max-width: 100%;
-            height: auto;
-        }
         .note {
             background: #fff3cd;
             padding: 20px;
@@ -230,7 +208,7 @@ if __name__ == '__main__':
             <ol>
                 <li>下載並解壓 ZIP 套件</li>
                 <li>打開終端/命令提示字元，進入套件資料夾</li>
-                <li>安裝依賴套件：<code>pip install -r requirements.txt</code></li>
+                <li>安裝依賴套件：<code>pip install -r requirements_desktop.txt</code></li>
                 <li>啟動應用程式：<code>python main.py</code></li>
             </ol>
         </div>
