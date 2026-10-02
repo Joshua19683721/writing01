@@ -1,7 +1,0 @@
-
-PyQt6
-jieba
-gTTS
-SpeechRecognition
-playsound==1.2.2
-flask
